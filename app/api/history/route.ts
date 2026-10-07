@@ -1,0 +1,2 @@
+import {authorized,read,fail} from '../../../lib/studio';
+export async function GET(req:Request){try{if(!await authorized(req))return fail('Studio sign-in required',403);const key=new URL(req.url).searchParams.get('key');if(key!=='before-polish'&&key!=='previous')return fail('Unknown checkpoint');const snapshot=await read(key);if(!snapshot)return fail('No saved checkpoint yet',404);return Response.json({content:JSON.parse(snapshot.value),savedAt:snapshot.expires},{headers:{'Cache-Control':'no-store'}})}catch{return fail('Unable to load checkpoint',503)}}

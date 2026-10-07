@@ -1,0 +1,10 @@
+.collection-stage{position:relative}
+.collection-side-controls{position:absolute;inset:0;pointer-events:none;z-index:3}
+.collection-side-controls>button{position:absolute;top:50%;transform:translateY(-50%);pointer-events:auto;display:grid;place-items:center;width:42px;height:54px;border-radius:16px;border:1px solid #ffffff60;background:#111626d9;color:#fff;backdrop-filter:blur(12px);box-shadow:0 5px 20px #0003;transition:background .2s,box-shadow .2s}
+.collection-side-controls>button:hover{background:#45406bee;box-shadow:0 5px 24px #9380ff55}
+.collection-side-controls>button:focus-visible{outline:3px solid var(--acid);outline-offset:2px}
+.collection-prev{left:7px}.collection-next{right:7px}
+.collection-stage:has(.collection-side-controls){padding-inline:58px;background:color-mix(in srgb,var(--background) 85%,var(--album));border-radius:20px}
+.collection-stage:has(.collection-side-controls) .collection-media{border-radius:14px;overflow:hidden}
+@media(max-width:640px){.collection-stage:has(.collection-side-controls){padding-inline:39px}.collection-side-controls>button{width:32px;height:44px;border-radius:12px}.collection-prev{left:3px}.collection-next{right:3px}}
+@media(prefers-reduced-motion:reduce){.collection-side-controls>button{transition:none}}

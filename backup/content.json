@@ -1,0 +1,621 @@
+{
+  "profile": {
+    "name": "Gihan Chithrasena",
+    "english": "SCIENCE IN MOTION",
+    "role": "විද්‍යා ආචාර්ය",
+    "tag": "කුතුහලයෙන් ඇරඹෙන අලුත් ගමනක්",
+    "hero1": "විද්‍යාවට",
+    "hero2": "අලුත්",
+    "hero3": "මානයක්.",
+    "bio": "පොතෙන් එහා ලෝකය දකින්න. ප්‍රශ්න අහන්න. අත්හදා බලන්න. විද්‍යාව සරලව, ආසාවෙන් ඉගෙන ගන්න අපිත් එක්ක එකතු වෙන්න.",
+    "aboutTitle": "පිලිතුරකට වඩා,\nප්‍රශ්නයක්\n",
+    "about": "විද්‍යාව කියන්නේ කටපාඩම් කරන විෂයක් විතරක් නෙවෙයි. අප වටා තියෙන ලෝකය තේරුම් ගන්න තියෙන ලස්සනම ක්‍රමයක්. සරල පැහැදිලි කිරීම්, ප්‍රායෝගික ක්‍රියාකාරකම් සහ සුහද සාකච්ඡා එක්ක ඔබේ ඉගෙනීමේ ගමනට අපි උදව් කරනවා.",
+    "phone": "0712901714",
+    "whatsapp": "0712901714",
+    "email": "sunethgih@gmail.com",
+    "location": "Vishaka Institue, Ambalangoda",
+    "map": "63Q3+3GX, Ambalangoda",
+    "qualification": "6–11 ශ්‍රේණි • B.Sc (J'Pura)",
+    "footer": "Crafted with curiosity.",
+    "credit": "Sadeesha Jayasinghe",
+    "join": "පන්තියක් තෝරන්න",
+    "learn": "හඳුනා ගනිමු",
+    "scheduleTitle": "ඔබට ගැළපෙන\nපන්තිය මෙතැන.",
+    "inquiryTitle": "අලුත් ගමනක්\nඅරඹමු ද?",
+    "labTitle": "කරලා බලමු.\nඉගෙන ගනිමු.",
+    "photo": "/api/media/d7f70b9b-ca1a-49d7-a087-6c59ae83c54f",
+    "youtube": "https://www.youtube.com/channel/UCfjyWawdh9I5_d-gpTDIAVg",
+    "facebook": "",
+    "instagram": "",
+    "tiktok": "",
+    "qr": "",
+    "signatureName": "Gihan Chithrasena",
+    "logo": ""
+  },
+  "classes": [
+    {
+      "type": "physical",
+      "place": "විශාකා ආයතනය ● අම්බලන්ගොඩ",
+      "grade": "6",
+      "day": "සෙනසුරාදා",
+      "time": "ප.ව. 3:30 – 5:30"
+    },
+    {
+      "type": "physical",
+      "place": "විශාකා ආයතනය ● අම්බලන්ගොඩ",
+      "grade": "7",
+      "day": "බ්‍රහස්පතින්දා",
+      "time": "ප.ව. 3:00 – 5:00"
+    },
+    {
+      "type": "physical",
+      "place": "විශාකා ආයතනය ● අම්බලන්ගොඩ",
+      "grade": "8",
+      "day": "සඳුදා",
+      "time": "ප.ව. 3:00 – 5:00"
+    },
+    {
+      "type": "physical",
+      "place": "විශාකා ආයතනය ● අම්බලන්ගොඩ",
+      "grade": "9",
+      "day": "සෙනසුරාදා",
+      "time": "පෙ.ව. 9:30 – 11:30"
+    },
+    {
+      "type": "physical",
+      "place": "විශාකා ආයතනය ● අම්බලන්ගොඩ",
+      "grade": "10",
+      "day": "අඟහරුවාදා - Session 1",
+      "time": "පෙ.ව.  2:45 - 4:45"
+    },
+    {
+      "type": "physical",
+      "place": "විශාකා ආයතනය ● අම්බලන්ගොඩ",
+      "grade": "10",
+      "day": "ඉරිදා - Session 2",
+      "time": "ප.ව. 11:00 - 1:00 "
+    },
+    {
+      "type": "physical",
+      "place": "විශාකා ආයතනය ● අම්බලන්ගොඩ",
+      "grade": "11",
+      "day": "අඟහරුවාදා",
+      "time": "පෙ.ව. 5:15 - 9:15"
+    },
+    {
+      "type": "physical",
+      "place": "ඔනායා ආයතනය ● බටපොල",
+      "grade": "10",
+      "day": "සෙනසුරාදා",
+      "time": "ප.ව. 6:15 - 9:!5"
+    },
+    {
+      "type": "physical",
+      "place": "ඇරෝ ආයතනය ● තල්ගස්ගොඩ",
+      "grade": "6",
+      "day": "සිකුරාදා",
+      "time": "ප.ව. 5:00 - 7:00"
+    },
+    {
+      "type": "physical",
+      "place": "ඇරෝ ආයතනය ● තල්ගස්ගොඩ",
+      "grade": "7",
+      "day": "ඉරිදා",
+      "time": "ප.ව. 2:00 - 4:00"
+    },
+    {
+      "type": "physical",
+      "place": "ඇරෝ ආයතනය ● තල්ගස්ගොඩ",
+      "grade": "8",
+      "day": "සිකුරාදා",
+      "time": "ප.ව. 2:45 - 4:45"
+    },
+    {
+      "type": "physical",
+      "place": "ඇරෝ ආයතනය ● තල්ගස්ගොඩ",
+      "grade": "9",
+      "day": "සෙනසුරාදා",
+      "time": "පෙ.ව. 7:00 - 9:00"
+    },
+    {
+      "type": "physical",
+      "place": "ඇරෝ ආයතනය ● තල්ගස්ගොඩ",
+      "grade": "10",
+      "day": "සෙනසුරාදා",
+      "time": "ප.ව. 12:30 - 2:30"
+    },
+    {
+      "type": "physical",
+      "place": "ඇරෝ ආයතනය ● තල්ගස්ගොඩ",
+      "grade": "11",
+      "day": "ඉරිදා",
+      "time": "ප.ව. 4:15 - 8:15"
+    },
+    {
+      "type": "paper",
+      "place": "විශාකා ආයතනය ● අම්බලන්ගොඩ",
+      "grade": "10",
+      "day": "බ්‍රහස්පතින්දා - Group 1",
+      "time": "ප.ව. 6:30 - 8:30"
+    },
+    {
+      "type": "paper",
+      "place": "විශාකා ආයතනය ● අම්බලන්ගොඩ",
+      "grade": "10",
+      "day": "ඉරිදා - Group 2",
+      "time": "පෙ.ව. 8.30 - 10:30"
+    },
+    {
+      "type": "paper",
+      "place": "විශාකා ආයතනය ● අම්බලන්ගොඩ",
+      "grade": "11",
+      "day": "සෙනසුරාදා",
+      "time": "ප.ව. 6:30 - 8:30"
+    },
+    {
+      "type": "online",
+      "place": "Online",
+      "grade": "11 ● Revision",
+      "day": "බදාදා ● Good Morning Class",
+      "time": "පෙ.ව. 4:00 - 6:00"
+    },
+    {
+      "type": "online",
+      "place": "Online",
+      "grade": "11 ● Revision",
+      "day": "සිකුරාදා ● Night Class",
+      "time": "පෙ.ව. 8:00 - 10:30"
+    },
+    {
+      "type": "online",
+      "place": "Online",
+      "grade": "10 ",
+      "day": "සිකුරාදා ● Good Morning Class",
+      "time": "පෙ.ව. 4:00 - 6:00"
+    },
+    {
+      "type": "online",
+      "place": "Online",
+      "grade": "10",
+      "day": "සෙනසුරාදා - Night Class",
+      "time": "පෙ.ව. 9:00 - 10:30"
+    }
+  ],
+  "albums": [
+    {
+      "id": "practicals",
+      "title": "🎈 හය ශ්‍රේණියේ දරුවන් සඳහා හයිඩ්‍රජන් බැලූන් යැවීම",
+      "label": "Practical Activities",
+      "description": "සිසුන් ප්‍රායෝගිකව විද්‍යාත්මක පරීක්ෂණ නිරීක්ෂණය කරමින් විද්‍යාව විනෝදයෙන් හා අවබෝධයෙන් ඉගෙන ගන්නා අවස්ථා.",
+      "items": [
+        {
+          "id": "07c6e107-c210-4c6c-ab4f-84aa62f7955a",
+          "url": "/api/media/07c6e107-c210-4c6c-ab4f-84aa62f7955a",
+          "type": "image",
+          "name": "WhatsApp Image 2026-07-30 at 22.14.43 (1)-BjOow8sm.jpeg",
+          "caption": "",
+          "size": 58520
+        },
+        {
+          "id": "60edfcf1-4f10-4193-91a6-4508192fb5de",
+          "url": "/api/media/60edfcf1-4f10-4193-91a6-4508192fb5de",
+          "type": "image",
+          "name": "WhatsApp Image 2026-07-30 at 22.14.43-6ZNxny47.jpeg",
+          "caption": "",
+          "size": 118387
+        },
+        {
+          "id": "458a18be-6fd1-4319-a032-13b910d9a639",
+          "url": "/api/media/458a18be-6fd1-4319-a032-13b910d9a639",
+          "type": "image",
+          "name": "WhatsApp Image 2026-07-30 at 22.15.11-CtqyIGE3.jpeg",
+          "caption": "",
+          "size": 143952
+        },
+        {
+          "id": "7d1a9293-1be6-4933-8559-6df18369d30e",
+          "url": "/api/media/7d1a9293-1be6-4933-8559-6df18369d30e",
+          "type": "image",
+          "name": "WhatsApp Image 2026-07-30 at 22.15.12 (1)-C586XXzE.jpeg",
+          "caption": "",
+          "size": 99338
+        }
+      ]
+    },
+    {
+      "id": "safety",
+      "title": "සීසීටීවී මඟින් දරුවන් පිළිබඳ පූර්ණ අධීක්ෂණය",
+      "label": "Safety & Supervision",
+      "description": "පන්ති කාමර පරිශ්‍රය තුළ දරුවන්ගේ ආරක්ෂාව සහ අධ්‍යයන කටයුතු පිළිබඳ පූර්ණ අධීක්ෂණය සීසීටීවී කැමරා පද්ධති මඟින් තහවුරු කෙරේ",
+      "items": [
+        {
+          "id": "1a6ba3df-92ef-4f31-8ff4-da5a1ecb3aeb",
+          "url": "/api/media/1a6ba3df-92ef-4f31-8ff4-da5a1ecb3aeb",
+          "type": "image",
+          "name": "WhatsApp Image 2026-07-30 at 22.15.27 (1)-BU3XCbKP.jpeg",
+          "caption": "",
+          "size": 89377
+        },
+        {
+          "id": "17ef6352-ff7b-4a1a-943d-53937dd4ea5a",
+          "url": "/api/media/17ef6352-ff7b-4a1a-943d-53937dd4ea5a",
+          "type": "image",
+          "name": "WhatsApp Image 2026-07-30 at 22.15.27-rnvDFwuh.jpeg",
+          "caption": "",
+          "size": 66366
+        }
+      ]
+    },
+    {
+      "id": "trips",
+      "title": "ක්ෂේත්‍ර චාරිකා",
+      "label": "Field Trips",
+      "description": "පොතෙන් එහා සොයාගැනීම් සඳහා අපේ ගමන්.",
+      "items": [
+        {
+          "id": "81c62758-927e-421f-989f-18b32abc54cd",
+          "url": "/api/media/81c62758-927e-421f-989f-18b32abc54cd",
+          "type": "image",
+          "name": "WhatsApp Image 2026-07-31 at 00.04.01-DGQ84qgC.jpeg",
+          "caption": "",
+          "size": 93502
+        },
+        {
+          "id": "b9f56ecf-2408-46f5-b3d2-234c78a7b378",
+          "url": "/api/media/b9f56ecf-2408-46f5-b3d2-234c78a7b378",
+          "type": "image",
+          "name": "WhatsApp Image 2026-07-31 at 00.03.57-BNd9DDU5.jpeg",
+          "caption": "",
+          "size": 40253
+        },
+        {
+          "id": "84cc7252-4294-4c72-983f-025c3d02e8d3",
+          "url": "/api/media/84cc7252-4294-4c72-983f-025c3d02e8d3",
+          "type": "image",
+          "name": "WhatsApp Image 2026-07-31 at 00.03.56-CaYUZwoH.jpeg",
+          "caption": "",
+          "size": 124451
+        },
+        {
+          "id": "db29a724-c55f-4bf1-8493-6bcfa911a03f",
+          "url": "/api/media/db29a724-c55f-4bf1-8493-6bcfa911a03f",
+          "type": "image",
+          "name": "WhatsApp Image 2026-07-31 at 00.03.55-lWm1MfFW.jpeg",
+          "caption": "",
+          "size": 78016
+        },
+        {
+          "id": "d5ec4be5-6161-461b-b579-492e520e780b",
+          "url": "/api/media/d5ec4be5-6161-461b-b579-492e520e780b",
+          "type": "image",
+          "name": "WhatsApp Image 2026-07-31 at 00.03.55 (1)-CVxOm8Cb.jpeg",
+          "caption": "",
+          "size": 134856
+        },
+        {
+          "id": "148a271c-0017-4f5b-bd59-27a914de6a47",
+          "url": "/api/media/148a271c-0017-4f5b-bd59-27a914de6a47",
+          "type": "image",
+          "name": "WhatsApp Image 2026-07-31 at 00.03.54-CEe1X-2O.jpeg",
+          "caption": "",
+          "size": 81958
+        },
+        {
+          "id": "2856b023-0949-4cbd-88e2-907676c84790",
+          "url": "/api/media/2856b023-0949-4cbd-88e2-907676c84790",
+          "type": "image",
+          "name": "WhatsApp Image 2026-07-31 at 00.03.53-rIkWVzie.jpeg",
+          "caption": "",
+          "size": 157535
+        }
+      ]
+    },
+    {
+      "id": "seminars",
+      "title": "විභාගයට ආසන්නව සිදු කරන සම්මන්ත්‍රණ",
+      "label": "Special Seminars",
+      "description": "දැනුම බෙදාගන්නා විශේෂ හමුවීම්.",
+      "items": [
+        {
+          "id": "eb1fc9f7-a254-4083-b587-c5befe3150cd",
+          "url": "/api/media/eb1fc9f7-a254-4083-b587-c5befe3150cd",
+          "type": "image",
+          "name": "WhatsApp Image 2026-07-31 at 00.04.05 (1)-hH46hpyC.jpeg",
+          "caption": "",
+          "size": 180567
+        },
+        {
+          "id": "40aa9e22-8156-40ab-ab69-ef3c439bada9",
+          "url": "/api/media/40aa9e22-8156-40ab-ab69-ef3c439bada9",
+          "type": "image",
+          "name": "WhatsApp Image 2026-07-31 at 00.04.05-C466U5d-.jpeg",
+          "caption": "",
+          "size": 188054
+        }
+      ]
+    },
+    {
+      "id": "materials",
+      "title": "වර්ණවත් උසස් ප්‍රමිතියෙන් ලබාදෙන නිබන්ධන",
+      "label": "Study Materials",
+      "description": "පාඩම් සටහන්, ප්‍රශ්න පත්‍ර හා ඉගෙනුම් සම්පත්.",
+      "items": [
+        {
+          "id": "701b9ac5-275d-418d-b3f2-3b17a856dca1",
+          "url": "/api/media/701b9ac5-275d-418d-b3f2-3b17a856dca1",
+          "type": "image",
+          "name": "Science Workbook and Tulips on a Bright Table.png",
+          "caption": "",
+          "size": 1770057
+        },
+        {
+          "id": "d85c51fe-a6a0-4500-a11c-f84d5043ff08",
+          "url": "/api/media/d85c51fe-a6a0-4500-a11c-f84d5043ff08",
+          "type": "image",
+          "name": "Tulips and Science on a Modern Table.png",
+          "caption": "",
+          "size": 1905741
+        },
+        {
+          "id": "358fdbb0-39e8-486c-95d5-e5087b42bf69",
+          "url": "/api/media/358fdbb0-39e8-486c-95d5-e5087b42bf69",
+          "type": "image",
+          "name": "Tulips and Science Workbook on a Sunny Table.png",
+          "caption": "",
+          "size": 1839125
+        }
+      ]
+    },
+    {
+      "id": "timetable",
+      "title": "පන්ති කාලසටහන්",
+      "label": "Timetable Gallery",
+      "description": "පන්ති කාලසටහන් හා නව දැනුම්දීම්.",
+      "items": [
+        {
+          "id": "0033eaf7-ddb7-43a4-bbef-a3f0803828da",
+          "url": "/api/media/0033eaf7-ddb7-43a4-bbef-a3f0803828da",
+          "type": "image",
+          "name": "Sinhala Science Tutoring Promotional Poster.png",
+          "caption": "",
+          "size": 1740813
+        },
+        {
+          "id": "d9e07e2b-5c67-4572-bdf8-f658a71ed4a6",
+          "url": "/api/media/d9e07e2b-5c67-4572-bdf8-f658a71ed4a6",
+          "type": "image",
+          "name": "Sinhala Science Class Thumbnail.png",
+          "caption": "Sinhala Science Class Thumbnail.png",
+          "size": 1866797
+        }
+      ]
+    }
+  ],
+  "sectionTheme": {
+    "home": 9,
+    "about": 9,
+    "classes": 9,
+    "projects": 9,
+    "learn": 9,
+    "contact": 9
+  },
+  "videos": [
+    {
+      "id": "d28d9ff4-35c0-4c06-bff2-e637c65208ba",
+      "title": "මවුලය පාඩම",
+      "kind": "youtube",
+      "url": "https://www.youtube.com/live/i32xtyZHGcU?si=vknw9YNqBsrAL8Aj",
+      "thumbnail": "",
+      "description": "",
+      "grade": "Grade 10"
+    },
+    {
+      "id": "f18cb371-97aa-4264-a140-45ac951404e8",
+      "title": "10 ශ්‍රේණිය පුනරීක්ෂණ පන්තිය - 10 වන පාඩම",
+      "kind": "youtube",
+      "url": "https://www.youtube.com/watch?v=tDHQnC--_x4",
+      "thumbnail": "",
+      "description": "",
+      "grade": "Grade 10"
+    },
+    {
+      "id": "78084400-0d37-4886-ab19-32b6b2bf87aa",
+      "title": "11 ශ්‍රේණිය පුනරීක්ෂණ මාලාව - පලමුවන වන දිනය",
+      "kind": "youtube",
+      "url": "https://www.youtube.com/watch?v=H5b7h4syQ-c",
+      "thumbnail": "",
+      "description": "",
+      "grade": "Grade 11"
+    },
+    {
+      "id": "6abe5886-0aba-4562-a82f-95c4676a3609",
+      "title": "11 ශ්‍රේණිය පුනරීක්ෂණ මාලාව - දෙවන වන දිනය",
+      "kind": "youtube",
+      "url": "https://www.youtube.com/watch?v=16a1ABkXq1Q",
+      "thumbnail": "",
+      "description": "",
+      "grade": ""
+    },
+    {
+      "id": "dfb76ac1-d74a-4d84-8e0f-09c604a27e7f",
+      "title": "11 ශ්‍රේණිය පුනරීක්ෂණ මාලාව - දෙවන වටය",
+      "kind": "youtube",
+      "url": "https://www.youtube.com/watch?v=nRSU2qpiDZY",
+      "thumbnail": "",
+      "description": "",
+      "grade": ""
+    },
+    {
+      "id": "3eb2ae37-87e4-4155-b41f-df136350948b",
+      "title": "6–11 පාඩම්",
+      "kind": "playlist",
+      "url": "https://www.youtube.com/playlist?list=PLW8cuZD74Yks",
+      "thumbnail": "/api/media/7e4cf26f-ae26-42cd-9099-5a3894277695",
+      "description": "",
+      "grade": "Grade 6 - 11"
+    },
+    {
+      "id": "01c442af-2305-45ea-a841-b29ad81db63f",
+      "title": "ගිහාන් සර්ගේ හැඳින්වීම",
+      "kind": "playlist",
+      "url": "https://www.youtube.com/playlist?list=PLJ4i_V9WY3Bs",
+      "thumbnail": "/api/media/3b727016-fd62-4f9b-a2b4-9df935c79615",
+      "description": "",
+      "grade": "Introduction To Class"
+    },
+    {
+      "id": "3780fa87-af69-44d3-86f5-927a80d95e56",
+      "title": "ක්ෂමතාව",
+      "kind": "playlist",
+      "url": "https://www.youtube.com/playlist?list=PLYvxlNtnzRc8",
+      "thumbnail": "/api/media/63311a52-3c53-433e-a563-43cd4dc8bb84",
+      "description": "",
+      "grade": ""
+    },
+    {
+      "id": "c70b03ae-d1a0-40e8-be37-c83f229ff76b",
+      "title": "පන්ති කාමරයේ ඉගැන්වීම",
+      "kind": "playlist",
+      "url": "https://www.youtube.com/playlist?list=PLHzMvJynqzZo",
+      "thumbnail": "/api/media/59ac6a8c-3af9-4eb5-86d8-b42ac2689fc8",
+      "description": "",
+      "grade": "Introduction"
+    }
+  ],
+  "effects": {
+    "global": {
+      "layers": [
+        "sparks",
+        "facets"
+      ],
+      "colors": [
+        "#29c9d3",
+        "#3c72f3",
+        "#92ebbb"
+      ],
+      "speed": 1.5,
+      "intensity": 0.5
+    },
+    "home": {
+      "layers": [
+        "dots",
+        "beams"
+      ],
+      "colors": [
+        "#efbe69",
+        "#fb86b7",
+        "#8898ff"
+      ],
+      "speed": 1.3,
+      "intensity": 0.5
+    },
+    "explore": {
+      "layers": [
+        "sparks",
+        "facets"
+      ],
+      "colors": [
+        "#29c9d3",
+        "#3c72f3",
+        "#92ebbb"
+      ],
+      "speed": 1.5,
+      "intensity": 0.5
+    },
+    "about": {
+      "layers": [
+        "sparks",
+        "facets"
+      ],
+      "colors": [
+        "#29c9d3",
+        "#3c72f3",
+        "#92ebbb"
+      ],
+      "speed": 1.5,
+      "intensity": 0.5
+    },
+    "classes": {
+      "layers": [
+        "sparks",
+        "facets"
+      ],
+      "colors": [
+        "#29c9d3",
+        "#3c72f3",
+        "#92ebbb"
+      ],
+      "speed": 1.5,
+      "intensity": 0.5
+    },
+    "projects": {
+      "layers": [
+        "rain",
+        "ribbons"
+      ],
+      "colors": [
+        "#8ee6d5",
+        "#ada0fd",
+        "#f1d186"
+      ],
+      "speed": 0.8,
+      "intensity": 0.5
+    },
+    "learn": {
+      "layers": [
+        "sparks",
+        "facets"
+      ],
+      "colors": [
+        "#29c9d3",
+        "#3c72f3",
+        "#92ebbb"
+      ],
+      "speed": 1.5,
+      "intensity": 0.5
+    },
+    "community": {
+      "layers": [
+        "sparks",
+        "facets"
+      ],
+      "colors": [
+        "#29c9d3",
+        "#3c72f3",
+        "#92ebbb"
+      ],
+      "speed": 1.5,
+      "intensity": 0.5
+    },
+    "contact": {
+      "layers": [
+        "sparks",
+        "facets"
+      ],
+      "colors": [
+        "#29c9d3",
+        "#3c72f3",
+        "#92ebbb"
+      ],
+      "speed": 1.5,
+      "intensity": 0.5
+    },
+    "footer": {
+      "layers": [
+        "stars",
+        "mesh"
+      ],
+      "colors": [
+        "#f48ed2",
+        "#8997ff",
+        "#f3c387"
+      ],
+      "speed": 1.5,
+      "intensity": 0.5
+    }
+  },
+  "appearance": {
+    "layout": "enhanced",
+    "footer": "mosaic"
+  }
+}

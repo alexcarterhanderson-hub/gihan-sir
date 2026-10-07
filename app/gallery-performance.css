@@ -1,0 +1,23 @@
+.collection-stage:has(.collection-side-controls){padding:0!important;background:transparent}
+.collection-stage:has(.collection-side-controls) .collection-media{border-radius:0}
+.collection-prev{left:12px!important}.collection-next{right:12px!important}
+.collection-side-controls>button{width:44px;height:44px;border-radius:50%;background:#121426b8;border:1px solid #ffffff80;box-shadow:0 6px 24px #0005;transition:background .2s,box-shadow .2s,scale .2s}
+.collection-side-controls>button:hover{scale:1.1;background:#7265acdf;box-shadow:0 5px 32px #a692ff66}
+.collection-media-stack{display:grid;width:100%;height:100%;min-height:260px;isolation:isolate}
+.collection-frame{grid-area:1/1;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .65s cubic-bezier(.22,1,.36,1),visibility 0s linear .65s;min-width:0}
+.collection-frame.frame-active{opacity:1;visibility:visible;pointer-events:auto;z-index:1;transition-delay:0s}
+.collection-frame img{width:100%;height:100%;object-fit:cover}
+.gallery-position{position:absolute;bottom:14px;left:14px;z-index:4;display:flex;align-items:center;gap:8px;padding:8px 13px;border:1px solid #ffffff55;border-radius:999px;background:#111525b8;color:#fff;backdrop-filter:blur(16px);font-size:14px;font-variant-numeric:tabular-nums;box-shadow:0 4px 20px #0003;pointer-events:none}.gallery-position b{font-weight:700}.gallery-position>span{opacity:.55}
+.grade-filters{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 25px}.grade-filters button{display:flex;align-items:center;gap:7px;padding:11px 14px;border:1px solid var(--line);border-radius:15px;background:var(--card);color:var(--foreground);font-size:14px;transition:background .25s,transform .25s,border-color .25s}.grade-filters button:hover{transform:translateY(-2px);border-color:#a695ff}.grade-filters button[aria-pressed=true]{background:linear-gradient(120deg,#8971ef33,#ee81d522);border-color:#a695ff;box-shadow:0 4px 20px #8971ef20}.grade-filters small{min-width:22px;padding:2px 5px;border-radius:8px;background:#8971ef22;font-size:12px}
+.enhanced-design .collection-5 .collection-media-stack{height:auto;min-height:320px}
+.enhanced-design .collection-5 .collection-frame{height:auto!important;align-self:start}
+.enhanced-design .collection-5 .collection-frame img{width:100%;height:auto!important;object-fit:contain}
+.gallery-loading,.gallery-error{position:absolute;right:12px;bottom:12px;z-index:4;max-width:calc(100% - 24px);padding:7px 12px;border-radius:12px;background:#0f1420e8;color:white;font-size:13px;box-shadow:0 6px 18px #0003}
+.gallery-loading{animation:gallery-status 1s ease-in-out infinite alternate}@keyframes gallery-status{to{opacity:.6}}
+.class-result{display:grid!important;grid-template-columns:minmax(90px,auto) 1fr 48px;gap:20px!important;position:relative;padding:20px 16px!important;border-radius:20px;border:1px solid var(--line)!important;background:linear-gradient(115deg,#8e80ff0d,transparent 70%);margin-bottom:12px;transition:border-color .3s,background .3s,box-shadow .3s}
+.class-result:hover{border-color:#ab9bff88!important;background:linear-gradient(115deg,#8e80ff25,#e978ff0b);box-shadow:0 10px 30px #9c80ff10}
+.grade-number{display:flex!important;align-items:center;gap:10px;flex-wrap:wrap;max-width:180px;font-size:25px!important;line-height:1.2!important;font-variant-numeric:tabular-nums}
+.grade-number small{font-size:14px!important;display:inline!important;color:var(--soft);margin:0!important;line-height:1.5}
+.class-result>div{display:grid;gap:8px}.class-result>div>b{font-size:17px}.class-result>div>span{display:flex;align-items:center;gap:7px;color:var(--soft);font-size:14px}.class-result>button{display:grid;place-items:center;width:44px;height:44px;border-radius:15px;background:#8e80ff18;border:1px solid #ab9bff55;transition:background .3s,transform .3s}.class-result>button:hover{transform:rotate(-7deg) scale(1.08);background:#8e80ff40}
+@media(max-width:640px){.collection-prev{left:8px!important}.collection-next{right:8px!important}.collection-side-controls>button{width:36px;height:36px}.class-result{gap:12px!important;padding:16px 12px!important;grid-template-columns:100px 1fr 38px}.grade-number{font-size:22px!important;gap:5px}.class-result>button{width:36px;height:36px}.class-result>div>b{font-size:15px}}
+@media(prefers-reduced-motion:reduce){.collection-frame,.class-result,.class-result>button,.collection-side-controls>button{transition:none!important}.gallery-loading{animation:none}}

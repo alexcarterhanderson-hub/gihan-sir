@@ -1,0 +1,7 @@
+import {read,db,authorized,sameOrigin,fail} from '../../../lib/studio';
+export async function GET(){try{return Response.json(JSON.parse((await read('content'))?.value||'null'),{headers:{'Cache-Control':'no-store'}})}catch{return fail('Unable to load saved content',503)}}
+export async function PUT(req:Request){try{if(!sameOrigin(req)||!await authorized(req))return fail('Studio sign-in required',403);const text=await req.text();if(text.length>1000000)return fail('Content too large',413);const d=JSON.parse(text);if(!d.profile||!Array.isArray(d.classes)||!Array.isArray(d.albums)||typeof d.sectionTheme!=='object'||d.videos!==undefined&&!Array.isArray(d.videos))return fail('Invalid content');const value=JSON.stringify(d);if(value.includes('blob:'))return fail('Wait for uploads to finish');const now=Date.now();await db().batch([
+db().prepare("INSERT OR IGNORE INTO studio (id,value,expires) SELECT 'before-polish',value,? FROM studio WHERE id='content'").bind(now),
+db().prepare("INSERT INTO studio (id,value,expires) SELECT 'previous',value,? FROM studio WHERE id='content' AND value<>? ON CONFLICT(id) DO UPDATE SET value=excluded.value,expires=excluded.expires").bind(now,value),
+db().prepare("INSERT INTO studio (id,value,expires) VALUES ('content',?,0) ON CONFLICT(id) DO UPDATE SET value=excluded.value").bind(value)
+]);return Response.json({ok:true})}catch{return fail('Unable to save. Your changes remain on screen.',503)}}
