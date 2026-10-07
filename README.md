@@ -18,7 +18,7 @@ pnpm install --frozen-lockfile
 pnpm build
 ```
 
-Create `.dev.vars` in the project root. Set your own password of at least 16 characters and add your ImageKit private key. The ImageKit endpoint is configured in `wrangler.standalone.json`; never put the private key in that file.
+Create `.dev.vars` in the project root. Set your own admin password of at least 8 characters (16 or more is recommended) and add your ImageKit private key. The ImageKit endpoint is configured in `wrangler.standalone.json`; never put the private key in that file.
 
 ```dotenv
 STANDALONE_ADMIN_PASSWORD="your-own-long-random-password"
@@ -55,7 +55,7 @@ pnpm exec wrangler secret put SCIENCE_MEDIA --config wrangler.standalone.json
 pnpm standalone:deploy
 ```
 
-Enter a password of at least 16 characters and your ImageKit private key when prompted. Set both Worker secrets on the `gihan-sir` Worker. A GitHub Actions or Dependabot repository secret is not automatically available to the deployed Worker; set `SCIENCE_MEDIA` with Wrangler as above. Changing the admin password secret changes the login password. Admin sessions expire after eight hours. Use HTTPS in production. Do not set `SITE_OWNER_EMAIL` or rely on forwarded ChatGPT identity headers for a standalone deployment.
+Enter an admin password of at least 8 characters (16 or more is recommended) and your ImageKit private key when prompted. Set both Worker secrets on the `gihan-sir` Worker. A GitHub Actions or Dependabot repository secret is not automatically available to the deployed Worker; set `SCIENCE_MEDIA` with Wrangler as above. Changing the admin password secret changes the login password. Admin sessions expire after eight hours. Use HTTPS in production. Do not set `SITE_OWNER_EMAIL` or rely on forwarded ChatGPT identity headers for a standalone deployment.
 
 ## Admin controls
 
