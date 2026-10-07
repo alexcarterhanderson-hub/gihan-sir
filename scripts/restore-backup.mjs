@@ -30,14 +30,31 @@ if(args.has('--local')===args.has('--remote')||!args.has('--confirm'))throw Erro
 const remote=args.has('--remote');
 const config=JSON.parse(readFileSync(path.join(root,'wrangler.standalone.json'),'utf8'));
 const database=config.d1_databases?.find(x=>x.binding==='DB');
-const bucket=config.r2_buckets?.find(x=>x.binding==='BUCKET')?.bucket_name;
-if(!database||!bucket)throw Error('Configure DB and BUCKET in wrangler.standalone.json');
+const endpoint=config.vars?.IMAGEKIT_URL_ENDPOINT;
+const devVarsPath=path.join(root,'.dev.vars');
+const devVars=existsSync(devVarsPath)?readFileSync(devVarsPath,'utf8'):'';
+const secretLine=devVars.split(/\r?\n/).find(line=>/^\s*SCIENCE_MEDIA\s*=/.test(line));
+const imageKitKey=process.env.SCIENCE_MEDIA??secretLine?.replace(/^\s*SCIENCE_MEDIA\s*=\s*/,'').trim().replace(/^(['"])(.*)\1$/,'$2');
+if(!database||!endpoint)throw Error('Configure DB and IMAGEKIT_URL_ENDPOINT in wrangler.standalone.json');
+if(!imageKitKey)throw Error('Set SCIENCE_MEDIA in .dev.vars before restoring media to ImageKit.');
 if(remote&&database.database_id==='00000000-0000-4000-8000-000000000000')throw Error('Set your real Cloudflare database ID first');
 const wrangler=path.join(root,'node_modules/wrangler/bin/wrangler.js');
 if(!existsSync(wrangler))throw Error('Run pnpm install first');
 const mode=remote?['--remote']:['--local','--persist-to',path.join(root,'.wrangler/state')];
 function run(command){const r=spawnSync(process.execPath,[wrangler,...command,'--config',path.join(root,'wrangler.standalone.json'),...mode],{cwd:root,stdio:'inherit'});if(r.error)throw r.error;if(r.status!==0)throw Error('Restore stopped. You may retry after fixing the reported error.');}
-for(const item of manifest.files)run(['r2','object','put',bucket+'/'+item.id,'--file',path.join(backup,item.file),'--content-type',item.contentType]);
+for(const item of manifest.files){
+ const form=new FormData();
+ form.append('file',new Blob([readFileSync(path.join(backup,item.file))],{type:item.contentType}),item.id);
+ form.append('fileName',item.id);
+ form.append('folder','/science-with-gihan');
+ form.append('useUniqueFileName','false');
+ const response=await fetch('https://upload.imagekit.io/api/v1/files/upload',{
+  method:'POST',
+  headers:{Authorization:'Basic '+Buffer.from(imageKitKey+':').toString('base64')},
+  body:form,
+ });
+ if(!response.ok)throw Error('ImageKit upload failed for '+item.id+' ('+response.status+'): '+await response.text());
+}
 const temporary=mkdtempSync(path.join(tmpdir(),'science-backup-'));
 try{
  const schema=readFileSync(path.join(root,'drizzle/0000_cooing_maestro.sql'),'utf8').replace(/CREATE TABLE /g,'CREATE TABLE IF NOT EXISTS ');

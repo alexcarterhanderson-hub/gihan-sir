@@ -1,11 +1,11 @@
 {
-  "name": "science-with-gihan",
+  "name": "gihan-sir",
   "main": "dist/server/index.js",
   "compatibility_date": "2026-05-15",
   "compatibility_flags": ["nodejs_compat"],
   "no_bundle": true,
   "rules": [{"type": "ESModule", "globs": ["**/*.js", "**/*.mjs"]}],
   "assets": {"directory": "dist/client"},
-  "d1_databases": [{"binding": "DB", "database_name": "science-content", "database_id": "00000000-0000-4000-8000-000000000000"}],
-  "r2_buckets": [{"binding": "BUCKET", "bucket_name": "science-media"}]
+  "d1_databases": [{"binding": "DB", "database_name": "science-content", "database_id": "ea5c6420-51b0-4714-8cdf-634e549616ed"}],
+  "vars": {"IMAGEKIT_URL_ENDPOINT": "https://ik.imagekit.io/9gpndmrs9"}
 }

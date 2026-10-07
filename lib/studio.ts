@@ -1,7 +1,6 @@
 import {env} from 'cloudflare:workers';
 import {getChatGPTUser} from '../app/chatgpt-auth';
 export function db(){if(!env.DB)throw Error('Storage unavailable');return env.DB}
-export function bucket(){if(!env.BUCKET)throw Error('Storage unavailable');return env.BUCKET}
 export async function read(id:string){return db().prepare('SELECT value, expires FROM studio WHERE id = ?').bind(id).first<{value:string;expires:number}>()}
 export async function put(id:string,value:string,expires=0){await db().prepare('INSERT INTO studio (id,value,expires) VALUES (?,?,?) ON CONFLICT(id) DO UPDATE SET value=excluded.value,expires=excluded.expires').bind(id,value,expires).run()}
 export function standalonePassword(){const password=(env as unknown as {STANDALONE_ADMIN_PASSWORD?:string}).STANDALONE_ADMIN_PASSWORD;return password&&password.length>=16?password:null}

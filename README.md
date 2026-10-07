@@ -4,7 +4,7 @@ Sinhala-first teacher profile with animated 3D science scenes, a live admin cons
 
 ## What this project uses
 
-React + Vinext (Next.js APIs), Tailwind, Framer Motion, Three.js and Cloudflare Workers with D1 and R2. The implemented storage is Cloudflare, not Supabase. The code is not a static-only website: persistent uploads and admin editing need the Worker backend. It is not ready to deploy directly to Vercel without adapting storage and authentication.
+React + Vinext (Next.js APIs), Tailwind, Framer Motion, Three.js, Cloudflare Workers and D1, with ImageKit for uploaded media. The code is not a static-only website: persistent uploads and admin editing need the Worker backend.
 
 The full ZIP includes source, bundled artwork, `backup/content.json`, and every uploaded media file referenced by the published content at export time. `backup/manifest.json` records file types, sizes and SHA-256 hashes. Secrets, password hashes, sessions, dependencies and build output are excluded. This is a snapshot; future edits on the current hosted Site do not automatically sync into your separate deployment.
 
@@ -18,10 +18,11 @@ pnpm install --frozen-lockfile
 pnpm build
 ```
 
-Create `.dev.vars` in the project root. Set your own password of at least 16 characters:
+Create `.dev.vars` in the project root. Set your own password of at least 16 characters and add your ImageKit private key. The ImageKit endpoint is configured in `wrangler.standalone.json`; never put the private key in that file.
 
 ```dotenv
 STANDALONE_ADMIN_PASSWORD="your-own-long-random-password"
+SCIENCE_MEDIA="your-imagekit-private-key"
 ```
 
 Then:
@@ -31,28 +32,28 @@ node scripts/restore-backup.mjs --local --confirm
 pnpm standalone:dev
 ```
 
-Open the local address printed by Wrangler, normally http://localhost:8787. Local D1 and R2 persist in `.wrangler/state`. Click the top logo five times quickly and enter the password you chose. No ChatGPT account is required for standalone mode. Never put this password into source or public config.
+Open the local address printed by Wrangler, normally http://localhost:8787. Local D1 persists in `.wrangler/state`; uploaded media is stored in your ImageKit account. Click the top logo five times quickly and enter the password you chose. No ChatGPT account is required for standalone mode. Never put this password into source or public config.
 
-To start a blank database instead of restoring the included content, use `pnpm standalone:migrate`. To verify the backup without changing anything, run `node scripts/restore-backup.mjs --check`. The restore command uploads the files into your own R2 bucket before inserting content, preserving image and video references. `--confirm` allows it to overwrite content in the selected destination database.
+To start a blank database instead of restoring the included content, use `pnpm standalone:migrate`. To verify the backup without changing anything, run `node scripts/restore-backup.mjs --check`. The restore command uploads the files to ImageKit before inserting content, preserving image and video references. `--confirm` allows it to overwrite content in the selected destination database.
 
 ## Deploy to your own Cloudflare account
 
 ```powershell
 pnpm exec wrangler login
 pnpm exec wrangler d1 create science-content
-pnpm exec wrangler r2 bucket create science-media
 ```
 
-Put the returned database ID into `wrangler.standalone.json` under `d1_databases`. Change the Worker name if needed. These resources belong to your own account and are separate from the hosted Site.
+Put the returned database ID into `wrangler.standalone.json` under `d1_databases`. Set `IMAGEKIT_URL_ENDPOINT` there to your ImageKit URL endpoint. This project uses ImageKit for media storage and delivery; it does not require an R2 bucket. The ImageKit private key belongs in `.dev.vars` for local development and in a Cloudflare Worker secret for production.
 
 ```powershell
 pnpm build
 node scripts/restore-backup.mjs --remote --confirm
 pnpm exec wrangler secret put STANDALONE_ADMIN_PASSWORD --config wrangler.standalone.json
+pnpm exec wrangler secret put SCIENCE_MEDIA --config wrangler.standalone.json
 pnpm standalone:deploy
 ```
 
-Enter a password of at least 16 characters when prompted. If Wrangler asks to create the Worker during secret setup, allow it, then deploy the build. Changing this secret changes the login password. Admin sessions expire after eight hours. Use HTTPS in production. Do not set `SITE_OWNER_EMAIL` or rely on forwarded ChatGPT identity headers for a standalone deployment.
+Enter a password of at least 16 characters and your ImageKit private key when prompted. Set both Worker secrets on the `gihan-sir` Worker. A GitHub Actions or Dependabot repository secret is not automatically available to the deployed Worker; set `SCIENCE_MEDIA` with Wrangler as above. Changing the admin password secret changes the login password. Admin sessions expire after eight hours. Use HTTPS in production. Do not set `SITE_OWNER_EMAIL` or rely on forwarded ChatGPT identity headers for a standalone deployment.
 
 ## Admin controls
 
@@ -87,4 +88,4 @@ The `.gitignore` excludes secrets, local databases, dependencies and build outpu
 
 This version does not implement SMS notifications, one-time locked-video codes, student accounts or multi-admin invitations. Videos are public. Check the source before claiming those earlier proposed features are live.
 
-References: [Cloudflare local data](https://developers.cloudflare.com/workers/local-development/local-data/), [secrets](https://developers.cloudflare.com/workers/configuration/secrets/), [D1 commands](https://developers.cloudflare.com/workers/wrangler/commands/d1/), [R2 commands](https://developers.cloudflare.com/r2/reference/wrangler-commands/).
+References: [Cloudflare local data](https://developers.cloudflare.com/workers/local-development/local-data/), [secrets](https://developers.cloudflare.com/workers/configuration/secrets/), [D1 commands](https://developers.cloudflare.com/workers/wrangler/commands/d1/), [ImageKit server-side upload](https://imagekit.io/docs/api-reference/upload-file-api/server-side-file-upload).
