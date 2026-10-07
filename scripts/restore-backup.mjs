@@ -4,6 +4,8 @@ import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import {tmpdir} from 'node:os';
 import {spawnSync} from 'node:child_process';
+import {createInterface} from 'node:readline/promises';
+import {stdin,stdout} from 'node:process';
 
 const root=fileURLToPath(new URL('../',import.meta.url));
 const backup=path.join(root,'backup');
@@ -42,6 +44,15 @@ const wrangler=path.join(root,'node_modules/wrangler/bin/wrangler.js');
 if(!existsSync(wrangler))throw Error('Run pnpm install first');
 const mode=remote?['--remote']:['--local','--persist-to',path.join(root,'.wrangler/state')];
 function run(command){const r=spawnSync(process.execPath,[wrangler,...command,'--config',path.join(root,'wrangler.standalone.json'),...mode],{cwd:root,stdio:'inherit'});if(r.error)throw r.error;if(r.status!==0)throw Error('Restore stopped. You may retry after fixing the reported error.');}
+if(!stdin.isTTY)throw Error('Restore requires an interactive terminal so it can confirm before uploading media.');
+const prompt=createInterface({input:stdin,output:stdout});
+try{
+ const answer=await prompt.question('This will upload the packaged snapshot to ImageKit and replace selected D1 content. Type RESTORE to continue: ');
+ if(answer!=='RESTORE'){
+  console.log('Restore cancelled. No media was uploaded and no database was changed.');
+  process.exit(0);
+ }
+}finally{prompt.close()}
 for(const item of manifest.files){
  const form=new FormData();
  form.append('file',new Blob([readFileSync(path.join(backup,item.file))],{type:item.contentType}),item.id);
@@ -61,6 +72,6 @@ try{
  const value=JSON.stringify(content).replaceAll("'","''");
  const sql=schema+"\nINSERT INTO studio (id,value,expires) VALUES ('content','"+value+"',0) ON CONFLICT(id) DO UPDATE SET value=excluded.value,expires=excluded.expires;\n";
  const file=path.join(temporary,'restore.sql');writeFileSync(file,sql);
- run(['d1','execute','DB','--file',file]);
+ run(['d1','execute','DB','--file',file,'--yes']);
 }finally{rmSync(temporary,{recursive:true,force:true})}
 console.log('Content and media restored into your '+(remote?'Cloudflare account.':'persistent local database and file storage.'));

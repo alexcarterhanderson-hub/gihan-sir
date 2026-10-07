@@ -36,6 +36,8 @@ Open the local address printed by Wrangler, normally http://localhost:8787. Loca
 
 To start a blank database instead of restoring the included content, use `pnpm standalone:migrate`. To verify the backup without changing anything, run `node scripts/restore-backup.mjs --check`. The restore command uploads the files to ImageKit before inserting content, preserving image and video references. `--confirm` allows it to overwrite content in the selected destination database.
 
+To move the current content from the existing hosted site into a new, empty standalone D1 database, use `node scripts/migrate-live-content.mjs` for a read-only preview, then add `--apply` only after reviewing the target. The script refuses to proceed if the destination already contains the `studio` table. It uploads the live site's current media to ImageKit and inserts the live content without changing the source site.
+
 ## Deploy to your own Cloudflare account
 
 ```powershell
