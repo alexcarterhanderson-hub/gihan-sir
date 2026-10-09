@@ -1,0 +1,50 @@
+.minimal-performance-mode .hero-grid,
+.minimal-performance-mode .hero-halo,
+.minimal-performance-mode .ambient-universe,
+.minimal-performance-mode .community-aurora,
+.minimal-performance-mode .animated-backdrop {
+  display: none !important;
+}
+
+.minimal-performance-mode .hero-content {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.minimal-performance-mode *,
+.minimal-performance-mode *::before,
+.minimal-performance-mode *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+
+.minimal-performance-mode .signature-footer .signature-wall-track {
+  animation: signature-scroll 38s linear infinite !important;
+}
+
+.minimal-performance-mode .signature-footer .wall-right .signature-wall-track {
+  animation-direction: reverse !important;
+  animation-duration: 44s !important;
+}
+
+.minimal-performance-mode .signature-footer .signature-center h2 strong {
+  animation: signature-color 12s ease-in-out infinite !important;
+}
+
+.minimal-performance-mode .signature-footer .signature-placeholder > svg {
+  animation: icon-hover 9s ease-in-out infinite !important;
+}
+
+.minimal-performance-mode .signature-footer .signature-placeholder > svg:last-child {
+  animation-delay: -4s !important;
+}
+
+@media (max-width: 700px) {
+  .minimal-performance-mode .signature-footer .signature-wall-track {
+    animation: signature-scroll-horizontal 38s linear infinite !important;
+  }
+}
+
+html:has(.minimal-performance-mode) {
+  scroll-behavior: auto;
+}
