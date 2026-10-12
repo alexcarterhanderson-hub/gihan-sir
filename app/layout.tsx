@@ -6,6 +6,7 @@ import "./viewer.css";
 import "./gallery-fix.css";
 import "./gallery-performance.css";
 import "./performance.css";
+import "./creator-cutscene.css";
 
 export const metadata: Metadata = {
   title: "Science in Motion | විද්‍යාවට අලුත් මානයක්",
